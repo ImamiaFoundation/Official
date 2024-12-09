@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recent Content</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/postImg.css">
+    <link rel="stylesheet" href="css/indexMiddle.css">
+    <style>
+       
+        .card {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+          <div class="logo">
+            <!-- <img src="imgs/logo.png" alt="Logo"> -->
+          </div>
+          <a href="" id="#top"></a>
+          <button class="menu-toggle" style=" margin-top: 10px;
+          position: fixed;
+          top: 10px; 
+          left: 10px;
+          z-index: 100;" aria-label="Toggle menu">&#9776;</button>
+          <ul class="nav-links">
+            <li><a href="/" class="active">Home</a></li>
+            <!-- <li><a href="#">About Us</a></li> -->
+            <li><a href="#">Quranic Clips</a></li>
+            <li class="dropdown">
+              <a href="#">Categories</a>
+              <ul class="dropdown-menu">
+                <div id="jsonFilesContainer"></div>
+              </ul>
+            </li>
+            <li><a target="" href="Admin">Admin</a></li>
+          </ul>
+          <!-- <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>🔍</button>
+          </div> -->
+        </nav>
+        
+      </header>
+
+      <div class="" style="margin:25px;">
+<h1>Recent Content</h1>
+<br>
+<div id="content"></div>
+</div>
+
+<script>
+// Get query parameters from the URL
+function getQueryParam(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+}
+
+
+// Function to display content from query params
+function displayContentFromParams() {
+    const contentDiv = document.getElementById("content");
+    const file = getQueryParam("file");
+    const titles = getQueryParam("title");
+    const details = getQueryParam("details");
+
+    if (!file || !details) {
+        contentDiv.innerHTML = "<p>No content found.</p>";
+        return;
+    }
+
+    const card = document.createElement("div");
+    card.className = "card";
+
+    // Display the description
+    const description = document.createElement("p");
+    const title= document.createElement("p");
+    title.textContent = `${decodeURIComponent(title)}`;
+    description.textContent = `${decodeURIComponent(details)}`;
+
+    // Display the image
+    const img = document.createElement("img");
+    img.src = `https://raw.githubusercontent.com/NightmareShadow4Exploit/p3/main/${decodeURIComponent(file)}`;
+    img.alt = decodeURIComponent(details);
+
+    // Append image and description to the card
+    card.appendChild(img);
+    card.appendChild(title);
+    card.appendChild(description);
+    contentDiv.appendChild(card);
+}
+
+// Run the function when the DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
+    displayContentFromParams();
+});
+</script>
+
+<footer>
+    
+    <div class="footer-wave">
+
+      <svg  viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,49C200,110,400,10,600,45s400,50,600-15V120H0Z" fill="#00d186"></path>
+      </svg>
+
+  
+
+      <svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,49C200,110,400,10,600,45s400,50,600-15V120H0Z" fill="#1d1d2e"></path>
+      </svg>
+     
+    </div>
+    <!-- <hr style="border: 2px #fff dotted -->
+    <div class="footer-content" style="border-top: 2px dotted #fff; ">
+      <div style="display: flex; ">
+      <!-- <p>کلیه حقوق مادی و معنوی برای سایت عطر قرآن محفوظ می‌باشد.</p> -->
+       <p style="padding-right: 50px;">All material and intellectual rights are reserved for the Imamiya website.</p>
+      <!-- <button id="back-to-top">رفتن به بالا</button> -->
+      <!-- <button id="back-to-top" style="position: fixed; bottom: 10px; right: 10px;">Go to top</button> -->
+      <a id="back-to-top" style="" href="#top">Go to top</a>
+
+    </div>
+  </div>
+  </footer>
+  <!-- <script src="js/PostImg.js"></script> -->
+  <!-- <script src="js/script.js"></script> -->
+  <!-- <script src="js/hadith.js"></script> -->
+</body>
+</html>
+
+
+

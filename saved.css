@@ -1,0 +1,94 @@
+.mainContentContainer{
+    /* background-color: black; */
+    padding: 20px;
+    margin: 0px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.contenth1 {
+    background-color: #007acc;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+/* Content Container */
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Card Styles */
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 10px;
+    width: 400px;
+    /* text-align: center; */
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Image Styles */
+.card img {
+    width: 100%;          /* Make the image take up 100% of the card's width */
+    height: auto;         /* Keep the aspect ratio intact */
+    max-height: 300px;    /* Limit the height to 300px */
+    border-radius: 4px;   /* Rounded corners for the image */
+    object-fit: cover;    /* Ensures the image covers the area without stretching */
+    margin-bottom: 15px;
+}
+
+
+/* Description, Timestamp, and File Styles */
+.card p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.card ul li {
+    margin: 5px 0;
+}
+
+.card ul li a {
+    text-decoration: none;
+    color: #007acc;
+    font-weight: bold;
+}
+
+.card ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+    }
+}

@@ -1,0 +1,124 @@
+/* Defining IRANSans font */
+@font-face {
+    font-family: "IRANSans";
+    font-style: normal;
+    font-weight: 500;
+    font-display: block;
+    src: url("https://atrequran.ir/wp-content/themes/mweb-digiacademy/assets/fonts/IRANSans-medium.eot");
+    src: url("https://atrequran.ir/wp-content/themes/mweb-digiacademy/assets/fonts/IRANSans-medium.eot?#iefix") format("embedded-opentype"),
+         url("https://atrequran.ir/wp-content/themes/mweb-digiacademy/assets/fonts/IRANSans-medium.woff") format("woff"),
+         url("https://atrequran.ir/wp-content/themes/mweb-digiacademy/assets/fonts/IRANSans-medium.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "IRANSans";
+    font-style: normal;
+    font-weight: normal;
+    font-display: block;
+    src: url("https://atrequran.ir/wp-content/themes/mweb-digiacademy/assets/fonts/IRANSans.eot");
+    src: url("https://atrequran.ir/wp-content/themes/mweb-digiacademy/assets/fonts/IRANSans.eot?#iefix") format("embedded-opentype"),
+         url("https://atrequran.ir/wp-content/themes/mweb-digiacademy/assets/fonts/IRANSans.woff") format("woff"),
+         url("https://atrequran.ir/wp-content/themes/mweb-digiacademy/assets/fonts/IRANSans.ttf") format("truetype");
+  }
+  
+  /* Defining IRANSansnum font */
+  @font-face {
+    font-family: "IRANSansnum";
+    font-style: normal;
+    font-weight: 500;
+    font-display: block;
+    src: url("https://atrequran.ir/wp-content/themes/mweb-digiacademy/assets/fonts/IRANSans-medium-fanum.eot");
+    src: url("https://atrequran.ir/wp-content/themes/mweb-digiacademy/assets/fonts/IRANSans-medium-fanum.eot?#iefix") format("embedded-opentype"),
+         url("https://atrequran.ir/wp-content/themes/mweb-digiacademy/assets/fonts/IRANSans-medium-fanum.woff") format("woff"),
+         url("https://atrequran.ir/wp-content/themes/mweb-digiacademy/assets/fonts/IRANSans-medium-fanum.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "IRANSansnum";
+    font-style: normal;
+    font-weight: normal;
+    font-display: block;
+    src: url("https://atrequran.ir/wp-content/themes/mweb-digiacademy/assets/fonts/IRANSans-fanum.eot");
+    src: url("https://atrequran.ir/wp-content/themes/mweb-digiacademy/assets/fonts/IRANSans-fanum.eot?#iefix") format("embedded-opentype"),
+         url("https://atrequran.ir/wp-content/themes/mweb-digiacademy/assets/fonts/IRANSans-fanum.woff") format("woff"),
+         url("https://atrequran.ir/wp-content/themes/mweb-digiacademy/assets/fonts/IRANSans-fanum.ttf") format("truetype");
+  }
+  
+  /* Font Awesome 6 */
+  @font-face {
+    font-family: "Font Awesome 6";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("https://atrequran.ir/wp-content/themes/mweb-digiacademy/assets/fonts/fa-light-300.woff2") format("woff2"),
+         url("https://atrequran.ir/wp-content/themes/mweb-digiacademy/assets/fonts/fa-light-300.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Font Awesome 6 Brands";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("https://atrequran.ir/wp-content/themes/mweb-digiacademy/assets/fonts/fa-brands-400.woff2") format("woff2"),
+         url("https://atrequran.ir/wp-content/themes/mweb-digiacademy/assets/fonts/fa-brands-400.ttf") format("truetype");
+  }
+  
+  /* Global CSS Variables */
+  :root {
+    --maincolor: #00d186;
+    --mainfont: IRANSans;
+    --mainfontnum: IRANSansnum;
+  }
+  
+  /* Example usage */
+  body {
+    font-family: var(--mainfont), sans-serif;
+  }
+  
+  .header_alert {
+    background-color: #00a88c;
+  }
+  
+  .mweb-main-menu ul>li.level-0>a {
+    font-size: 12px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .entry-content, .entry-content>p {
+    font-size: 12px;
+    line-height: 23px;
+  }
+  
+  .entry-content>h2, .entry-content>h3 {
+    font-weight: 500;
+  }
+  
+  .fab {
+    font-family: "Font Awesome 5 Brands";
+    font-size: x-large;
+  }
+  
+  a.download-link {
+    color: blue;
+    text-decoration: underline !important;
+    font-size: 14px;
+    font-weight: 500;
+    padding-right: 33px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: block;
+    background: url(https://ganjinedanesh.ir/wp-content/uploads/2018/01/download.png) right center no-repeat;
+  }
+  
+  .widget_text .widget-content a img, .widget_text .widget-content p img {
+    border-radius: 3px;
+    float: right;
+    margin-top: 15px;
+    padding-left: 12px;
+    width: 100%;
+  }
+
+  body {
+    font-family: 'IRANSans', sans-serif;
+  }

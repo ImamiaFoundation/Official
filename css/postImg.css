@@ -1,0 +1,170 @@
+button{
+    color:#005f47;
+    font-weight: bold;
+    background-color: white;
+    border: #fff;
+}
+.main {
+    
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    /* gap: 20px; */
+    /* width: 90%; */
+    /* margin: 0 auto; */
+}
+.postImage {
+    position: relative;
+    flex: 1 1 300px;
+    height: 100vh; 
+    max-width: 1080px;
+    width: 1080px;
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.postImage:hover {
+    transform: scale(1.001);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.postImage::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: rgba(255, 255, 255, 0.3); Pale color overlay */
+    transition: background-color 0.3s ease;
+    z-index: 1; /* Ensure it overlays above the image */
+}
+
+.postImage:hover::after {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.postImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.postImage:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+#hadith-container {
+    flex: 1 1 300px;
+    /* max-width: 600px; */
+    /* background-color: #f4f4f4; */
+    /* border: 1px solid #ddd;
+    border-radius: 8px; */
+    padding: 20px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    /* text-align: center; */
+    margin: 0 auto;
+}
+
+#hadith-container h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+#hadith-container p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#hadith-container p em {
+    font-style: italic;
+    color: #777;
+}
+
+#hadith-container p strong {
+    font-weight: bold;
+    color: #333;
+}
+
+#copy-button {
+    background-color: #007f5f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+#copy-button:hover {
+    background-color: #005f47;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .main{
+        display:block;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .postImage {
+        position: relative;
+        flex: 1 1 100%; /* Make the postImage take full width on small screens */
+        /* height: 100vh;
+        max-width: 1080px; */
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .postImage {
+        flex: 1 1 100%; /* Full width for small screens */
+        height: auto; /* Adjust height for smaller screens */
+    }
+
+    #hadith-container {
+        flex: 1 1 100%; /* Full width for small screens */
+        padding: 15px; /* Adjust padding for small screens */
+    }
+
+    #hadith-container h3 {
+        font-size: 20px; /* Smaller heading size on small screens */
+    }
+
+    #hadith-container p {
+        font-size: 14px; /* Smaller font size for readability */
+    }
+
+    #copy-button {
+        padding: 8px 12px; /* Smaller button padding on small screens */
+        font-size: 12px; /* Smaller font size for the button */
+    }
+}
+
+@media (max-width: 480px) {
+    .postImage {
+        flex: 1 1 100%; /* Full width for very small screens */
+    }
+
+    #hadith-container h3 {
+        font-size: 18px; /* Even smaller heading size */
+    }
+
+    #hadith-container p {
+        font-size: 12px; /* Adjust font size further */
+    }
+}

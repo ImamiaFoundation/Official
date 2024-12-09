@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imamiya</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/postImg.css">  
+  <link rel="stylesheet" href="css/indexMiddle.css">
+  <link rel="stylesheet" href="css/recent.css">
+  <!-- <link rel="stylesheet" href="css/font.css"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Vazir&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shabnam&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tanha&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet"> -->
+  <script src="js/main.js"></script>
+
+<style>
+  
+  a{
+    text-decoration: none;
+    color: #333;
+  }
+  a:hover{
+    color: #ccc;
+  }
+  body{
+    /* font-family: 'Shabnam', 'Noto Sans Arabic', 'Amiri' ,'Vazir'; */
+    font-family: 'Noto Sans Arabic';
+    /* font-family: 'Amiri'; */
+    /* font-family: 'Vazir'; */
+    /* font-family: 'Tanha'; */
+
+  }
+
+  
+
+
+
+</style>
+</head>
+  <script src="js/recent.js"></script>
+
+<body>
+  <header>
+    <button class="menu-toggle" style=" margin-top: 10px;
+    position: fixed;
+    top: 10px; 
+    left: 10px;
+    z-index: 9999;" aria-label="Toggle menu">&#9776;</button>
+    <nav class="navbar" id="navbar1">
+      <div class="logo">
+        <!-- <img src="imgs/logo.png" alt="Logo"> -->
+      </div>
+      <a href="" id="#top"></a>
+     
+      <ul class="nav-links">
+        <li><a href="/" class="active">Home</a></li>
+        <!-- <li><a href="#">About Us</a></li> -->
+        <!-- <li><a href="#">Quranic Clips</a></li> -->
+        <li class="dropdown">
+          <a href="#">Categories</a>
+          <ul class="dropdown-menu">
+            <div id="jsonFilesContainer"></div>
+          </ul>
+        </li>
+        <!-- <li><a target="" href="Admin">Admin</a></li> -->
+      </ul>
+      <!-- <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button>🔍</button>
+      </div> -->
+    </nav>
+    
+  </header>
+
+
+<div class="main">
+<div class="postImage">
+<img id="repo-image" alt="Loading image..." />
+</div>
+
+<div id="hadith-container"></div>
+</div>
+<div class="container">
+
+  <h4></h4>
+  <div id="contentContainer"></div>
+</div>
+
+
+<!-- <br>
+<br>
+<br>
+<br>
+<br> -->
+
+
+<!-- ///// indexMiddle.css ////// -->
+<!-- <div class="main-container">
+  Single Image
+  <div class="main-image">
+  <img src="imgs/فاتح-خیبر-استوری.jpg" alt="">
+  </div>
+
+  Grid of Images
+  <div class="grid-container">
+  <a href="https://duas.org/">  <div class="grid-item"><img src="imgs/links/duas.webp" alt=""></div></a>
+  <a href=""> <div class="grid-item">IMG</div></a>
+  <a href="">  <div class="grid-item">IMG</div></a>
+  <a href="">  <div class="grid-item">IMG</div></a>
+  <a href="">  <div class="grid-item">IMG</div></a>
+  <a href="">   <div class="grid-item">IMG</div></a>
+  </div>
+</div> -->
+
+
+<!-- <h1 class="contenth1">Recent Files and Images</h1> -->
+ <div class="mainContentContainer">
+<div id="content"></div>
+<script src="recent.js"></script>
+</div>
+<br>
+<br>
+
+  <footer>
+    
+    <div class="footer-wave">
+
+      <svg  viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,49C200,110,400,10,600,45s400,50,600-15V120H0Z" fill="#00d186"></path>
+      </svg>
+
+  
+
+      <svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,49C200,110,400,10,600,45s400,50,600-15V120H0Z" fill="#1d1d2e"></path>
+      </svg>
+     
+    </div>
+    <div class="footer-content" style="border-top: 2px dotted #fff; ">
+      <div style="display: flex; ">
+       <p style="padding-right: 50px;">All material and intellectual rights are reserved for the Imamiya website.</p>
+      <a id="back-to-top" style="" href="#top">Go to top</a>
+
+    </div> 
+  </div>
+  </footer>
+  <!-- <script src="js/recent.js"></script> -->
+  <script src="js/PostImg.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/hadith.js"></script>
+
+  <script>
+    // Add file click event listener to redirect to files.html with the selected file's name
+fileElement.addEventListener('click', () => {
+    window.location.href = `files.html?file=${file.name}`;
+});
+
+// Add dropdown click event listener to redirect to files.html with the subcategory
+listItem.addEventListener('click', event => {
+    event.stopPropagation(); // Prevent file click event
+    window.location.href = `files.html?subcategory=${encodeURIComponent(option)}`;
+});
+
+  </script>
+<!-- <br><br><br> -->
+
+
+</body>
+</html>
