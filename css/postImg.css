@@ -17,6 +17,7 @@ button{
     position: relative;
     flex: 1 1 300px;
     height: 100vh; 
+    /* height:auto; */
     max-width: 1080px;
     width: 1080px;
     margin: 0 auto;

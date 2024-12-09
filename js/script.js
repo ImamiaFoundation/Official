@@ -18,12 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // Back to top button functionality
-document.getElementById("back-to-top").addEventListener("click", () => {
-window.scrollTo({
-  top: 0,
-  behavior: "smooth"
-});
-});
+// document.getElementById("back-to-top").addEventListener("click", () => {
+// window.scrollTo({
+//   top: 0,
+//   behavior: "smooth"
+// });
+// });
 
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.querySelector(".menu-toggle");
