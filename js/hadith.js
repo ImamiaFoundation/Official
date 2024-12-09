@@ -101,34 +101,34 @@ function displayHadithContent(hadithContent) {
 
     container.innerHTML = "";
 
-    if (!hadithContent || !hadithContent.title || !hadithContent.hadith || !hadithContent.reference) {
+    if (!hadithContent || !hadithContent.title2 || !hadithContent.hadith || !hadithContent.reference) {
         container.innerHTML = "<p>Error: Invalid hadith content</p>";
         return;
     }
 
-    const { title, hadith, reference } = hadithContent;
+    const { title2, hadith, reference } = hadithContent;
 
     // Replace \n with <br> to create line breaks in the HTML
     const formattedHadith = hadith.replace(/\n/g, "<br>");
 
     container.innerHTML = `
-        <h3>${title}</h3>
+        <h3>${title2}</h3>
         <p><em>${formattedHadith}</em></p>
         <p><strong>Reference:</strong> ${reference}</p>
         <button id="copy-button">Copy</button>
     `;
 
     const copyButton = document.getElementById("copy-button");
-    copyButton.addEventListener("click", () => copyHadithContent(title, formattedHadith, reference));
+    copyButton.addEventListener("click", () => copyHadithContent(title2, formattedHadith, reference));
 }
 
 
 // Function to copy hadith content
-function copyHadithContent(title, hadith, reference) {
+function copyHadithContent(title2, hadith, reference) {
     // Replace <br> with actual newlines for the copied content
     const formattedHadithForCopy = hadith.replace(/<br>/g, '\n');
 
-    const contentToCopy = `${title}
+    const contentToCopy = `${title2}
 
 ${formattedHadithForCopy}
 
