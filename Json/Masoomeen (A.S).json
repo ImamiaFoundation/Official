@@ -1,5 +1,15 @@
 {
   "dropdowns": [
     "Imam Ali (A.S)"
+  ],
+  "metadata": [
+    {
+      "subcategory": "Imam Ali (A.S)",
+      "title": "Imam",
+      "description": "ali",
+      "timestamp": "12/11/2024, 10:49:39 PM",
+      "imagePath": "Images/Screenshot from 2024-12-10 23-21-49.png",
+      "filePaths": []
+    }
   ]
 }
