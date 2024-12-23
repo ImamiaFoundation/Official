@@ -46,16 +46,15 @@
           <a href="" id="#top"></a>
          
           <ul class="nav-links">
-            <li><a href="/" class="active">Home</a></li>
+            <li><a href="https://imamiafoundation.github.io/Official/" class="active">Home</a></li>
             <!-- <li><a href="#">About Us</a></li> -->
-            <li><a href="#">Quranic Clips</a></li>
+            <!-- <li><a href="#">Quranic Clips</a></li> -->
             <li class="dropdown">
               <a href="#">Categories</a>
               <ul class="dropdown-menu">
                 <div id="jsonFilesContainer"></div>
               </ul>
             </li>
-            <li><a target="" href="Admin">Admin</a></li>
           </ul>
           <!-- <div class="search-bar">
             <input type="text" placeholder="Search...">
@@ -66,7 +65,6 @@
       </header>
 
       <div class="" style="margin:25px;">
-<h1>Recent Content</h1>
 <br>
 <div id="content"></div>
 </div>
@@ -102,12 +100,12 @@ function displayContentFromParams() {
 
     // Display the image
     const img = document.createElement("img");
-    img.src = `https://raw.githubusercontent.com/NightmareShadow4Exploit/p3/main/${decodeURIComponent(file)}`;
+    img.src = `https://raw.githubusercontent.com/ImamiaFoundation/Official/main/${decodeURIComponent(file)}`;
     img.alt = decodeURIComponent(details);
 
     // Append image and description to the card
     card.appendChild(img);
-    card.appendChild(title);
+    // card.appendChild(title);
     card.appendChild(description);
     contentDiv.appendChild(card);
 }

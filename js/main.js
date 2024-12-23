@@ -36,10 +36,10 @@ async function displayJsonFiles() {
         fileElement.appendChild(title);
 
         // Redirect to files.html with the selected file's name when the file is clicked
-        fileElement.addEventListener('click', () => {
-            // Pass the full file name (with extension) to the URL
-            window.location.href = `files.html?file=${encodeURIComponent(file.name)}`;
-        });
+        // fileElement.addEventListener('click', () => {
+        //     // Pass the full file name (with extension) to the URL
+        //     window.location.href = `files.html?file=${encodeURIComponent(file.name)}`;
+        // });
 
         // Fetch JSON data to create dropdowns
         fetch(file.download_url)

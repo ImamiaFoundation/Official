@@ -56,7 +56,8 @@ async function displayContent() {
         const fileLink = document.createElement("a");
         const encodedDetails = encodeURIComponent(item.description);
         fileLink.textContent = item.title; // Display title here
-        fileLink.href = `recent.html?file=${encodeURIComponent(item.filePaths ? item.filePaths[0] : '')}&details=${encodedDetails}`;
+        fileLink.href = `recent.html?file=${encodeURIComponent(item.title)}&details=${encodedDetails}`;
+        // fileLink.href = `files.html?file=${item.title}&subcategory=${item.subcategory}`;
         fileLink.target = "_self"; // Open in the same window
 
         // Add an image if available
